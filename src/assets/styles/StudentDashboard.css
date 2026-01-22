@@ -1,0 +1,343 @@
+/* src/assets/styles/StudentDashboard.css */
+.student-dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f7fa;
+}
+
+.dashboard-header {
+  background-color: #8e44ad;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #4a6fa5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.dashboard-tabs {
+  background-color: white;
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0 2rem;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #666;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab-button.active {
+  color: #8e44ad;
+  border-bottom-color: #8e44ad;
+}
+
+.tab-button:hover {
+  color: #8e44ad;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Lessons Tab Styles */
+.lessons-content h2 {
+  margin: 0 0 1.5rem 0;
+  color: #333;
+}
+
+.lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.lesson-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.lesson-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.lesson-subject {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.lesson-progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #8e44ad;
+}
+
+.progress-text {
+  font-weight: bold;
+  color: #8e44ad;
+}
+
+.lesson-meta {
+  margin-bottom: 1rem;
+}
+
+.lesson-duration {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.lesson-button {
+  background-color: #8e44ad;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.lesson-button:hover {
+  background-color: #7e349d;
+}
+
+/* Practice Tab Styles */
+.practice-content h2 {
+  margin: 0 0 1.5rem 0;
+  color: #333;
+}
+
+.practice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.practice-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.practice-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.practice-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.difficulty-badge {
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.difficulty-badge.easy {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.difficulty-badge.medium {
+  background-color: #fff8e1;
+  color: #f57f17;
+}
+
+.difficulty-badge.hard {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.practice-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.practice-button {
+  background-color: #8e44ad;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.practice-button:hover {
+  background-color: #7e349d;
+}
+
+/* Quiz Tab Styles */
+.quiz-content h2 {
+  margin: 0 0 1.5rem 0;
+  color: #333;
+}
+
+.quiz-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.quiz-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.quiz-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.quiz-time {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.quiz-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.quiz-score {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #8e44ad;
+}
+
+.quiz-button {
+  background-color: #8e44ad;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-button:hover {
+  background-color: #7e349d;
+}
+
+/* Achievements Tab Styles */
+.achievements-content h2 {
+  margin: 0 0 1.5rem 0;
+  color: #333;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.achievement-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.achievement-card.earned {
+  border-left: 4px solid #8e44ad;
+}
+
+.achievement-card.locked {
+  opacity: 0.7;
+}
+
+.achievement-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.achievement-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.achievement-card p {
+  margin: 0 0 1rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.achievement-status {
+  font-weight: bold;
+  color: #8e44ad;
+}
