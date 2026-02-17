@@ -6,6 +6,10 @@ const teacherRoutes = require("./src/routes/teacher.routes");
 
 const app = express();
 
+const connectDB = require("./config/db");
+connectDB();
+
+
 // 🔹 Middleware
 app.use(cors());
 app.use(express.json());
